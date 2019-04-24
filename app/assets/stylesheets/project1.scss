@@ -1,10 +1,18 @@
 .thumb {
   max-height: 10em;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .feature {
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 15%;
+  max-height: 15%;
+  display: flex;
+  justify-content: center;
 }
 
 .flagicon {

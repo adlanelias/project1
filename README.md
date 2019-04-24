@@ -37,3 +37,15 @@ Click the link to use the site:
 * It's nowhere near complete, but in the future if I were to continue, I would add Squads and Players using API's, currently it's limited to only an admin being able to edit and create new players and clubs
 
 * Due to API hindrances, some of the seeds had to be manually entered in order to show a somewhat working website
+
+* Implement a search bar for the players
+
+* Get the flag icon gem to link with the country select gem so that the icon turns up automatically when selecting the country
+
+# What I learnt
+
+* This project my main focus was to understand how to use API's
+
+* Bootstrap
+
+* Deployment of website to heroku
