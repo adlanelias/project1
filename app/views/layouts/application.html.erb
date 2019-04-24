@@ -10,22 +10,33 @@
   </head>
 
   <body>
-    <div class="container">
-        <%= link_to 'Home', root_path %>
-        <% if @current_user.present? %>
+     <div class="d-flex" id="wrapper">
+
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Premier League Stuff </div>
+        <div class="list-group list-group-flush">
+          <a><%= link_to 'Home', root_path %></a>
+          <% if @current_user.present? %>
           <% if @current_user.admin? %>
-            <%= link_to "All users", users_path %>
-            <%= link_to "New Club", new_club_path %>
-            <%= link_to "New Player", new_player_path %>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "All users", users_path %></a>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "New Club", new_club_path %></a>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "New Player", new_player_path %></a>
           <% end %>
-          <%= link_to "Sign out #{  @current_user.email }", login_path, :method => 'delete' %>
-          <%= link_to "Players", players_path(sort_by: "name") %>
-          <%= link_to "Clubs", clubs_path(sort_by: "team_name") %>
-        <% else %>
-          <%= link_to 'Sign Up', new_user_path %>
-          <%= link_to 'Sign In', login_path %>
-        <% end %>
-      <%= yield %>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Players", players_path(sort_by: "name") %></a>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Clubs", clubs_path(sort_by: "team_name") %></a>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Standings", standings_path %></a>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Sign out #{  @current_user.email }", login_path, :method => 'delete' %></a>
+          <% else %>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to 'Sign Up', new_user_path %></a>
+          <a class="list-group-item list-group-item-action bg-light"><%= link_to 'Sign In', login_path %></a>
+          <% end %>
+      </div>
+      </div>
+
+      <div class="container-fluid">
+        <%= yield %>
+      </div>
     </div>
+
   </body>
 </html>

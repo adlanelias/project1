@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :clubs
   resources :players
   resources :standings
+  resources :squads
   get '/login' =>  'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
