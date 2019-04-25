@@ -148,3 +148,15 @@ table .col{
     margin-left: -15rem;
   }
 }
+
+.playerpic {
+  width: 20%;
+}
+
+.playerclub {
+  max-width: 15%;
+  max-height: 15%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 65px;
+}

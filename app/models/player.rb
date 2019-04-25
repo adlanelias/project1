@@ -12,9 +12,10 @@
 #  image        :text
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  club_id      :integer
 #
 
 class Player < ApplicationRecord
-  has_many :clubs
-  has_many :users, :through => :clubs
+  has_and_belongs_to_many :clubs
+  has_many :users
 end

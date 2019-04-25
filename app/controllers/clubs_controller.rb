@@ -39,6 +39,6 @@ class ClubsController < ApplicationController
   private
   def club_params
     # Strong parameters: whitelist of sanitized input (stuff that is okay to put in the database)
-    params.require(:club).permit(:team_name, :team_rank, :manager, :schedule, :image)
+    params.require(:club).permit(:team_name, :team_rank, :manager, :schedule, :image, :player_id)
   end
 end

@@ -28,7 +28,7 @@
   <%= f.url_field :image, :class => 'form-control' %>
   </div>
   <div class="form-group">
-  <%= f.select :club_ids, Club.pluck(:team_name, :id), :include_blank => true, :class => 'form-control' %>
+  <%= f.select :club_id, Club.pluck(:team_name, :id), :include_blank => true, :class => 'form-control' %>
   </div>
   <%= f.submit %>
 <% end %>

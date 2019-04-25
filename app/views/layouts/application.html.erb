@@ -15,20 +15,20 @@
       <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">Premier League Stuff </div>
         <div class="list-group list-group-flush">
-          <a><%= link_to 'Home', root_path %></a>
+          <a><%= link_to 'Home', root_path, :class => "list-group-item list-group-item-action bg-light" %></a>
           <% if @current_user.present? %>
           <% if @current_user.admin? %>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "All users", users_path %></a>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "New Club", new_club_path %></a>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "New Player", new_player_path %></a>
+          <a><%= link_to "All users", users_path, :class => "list-group-item list-group-item-action bg-light" %></a>
+          <a><%= link_to "New Club", new_club_path, :class => "list-group-item list-group-item-action bg-light" %></a>
+          <a><%= link_to "New Player", new_player_path, :class => "list-group-item list-group-item-action bg-light" %></a>
           <% end %>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Players", players_path(sort_by: "name") %></a>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Clubs", clubs_path(sort_by: "team_name") %></a>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Standings", standings_path %></a>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to "Sign out #{  @current_user.email }", login_path, :method => 'delete' %></a>
+          <a><%= link_to "Players", players_path(sort_by: "name"), :class => "list-group-item list-group-item-action bg-light" %></a>
+          <a><%= link_to "Clubs", clubs_path(sort_by: "team_name"), :class => "list-group-item list-group-item-action bg-light" %></a>
+          <a><%= link_to "Standings", standings_path, :class => "list-group-item list-group-item-action bg-light" %></a>
+          <a><%= link_to "Sign out #{  @current_user.email }", login_path, :method => 'delete', :class => "list-group-item list-group-item-action bg-light" %></a>
           <% else %>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to 'Sign Up', new_user_path %></a>
-          <a class="list-group-item list-group-item-action bg-light"><%= link_to 'Sign In', login_path %></a>
+          <a><%= link_to 'Sign Up', new_user_path, :class => "list-group-item list-group-item-action bg-light" %></a>
+          <a><%= link_to 'Sign In', login_path, :class => "list-group-item list-group-item-action bg-light" %></a>
           <% end %>
       </div>
       </div>

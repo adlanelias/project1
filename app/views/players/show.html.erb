@@ -1,4 +1,11 @@
-<%= image_tag @player.image, :class => 'feature' %>
+<div class="row">
+<% @player.clubs.each do |club| %>
+  <%= image_tag club.image, :class => 'playerclub' %>
+<% end %>
+</div>
+
+<div class="col-md-12">
+<%= image_tag @player.image, :class => 'playerpic' %>
 
   <ul>
     <li>Name: <%= @player.name %></li>
@@ -13,10 +20,7 @@
     <li>Position: <%= @player.position %> </li>
     <li>Number: <%= @player.number %> </li>
   </ul>
-
-  <% @player.clubs.each do |club| %>
-    <%= image_tag club.image, :class => 'thumb' %>
-  <% end %>
+</div>
 
 <div class="controls">
   <%= link_to 'Edit Player', edit_player_path(@player) %>
